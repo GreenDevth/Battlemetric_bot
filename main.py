@@ -40,14 +40,14 @@ async def on_ready():
             print(player)
             await client.change_presence(
                 status=discord.Status.online,
-                activity=discord.Activity(type=discord.ActivityType.watching, name=f"ผู้เล่นออนไลน์ {player}/20 คน"))
+                activity=discord.Activity(type=discord.ActivityType.watching, name=f"ผู้เล่นออนไลน์ {player}คน"))
         else:
             player = get_players()
             print(player)
             await client.change_presence(
                 status=discord.Status.online,
                 activity=discord.Activity(type=discord.ActivityType.watching, name=f'ผู้รอดชีวิต {player}/20 คน'))
-        await asyncio.sleep(15)
+        await asyncio.sleep(30)
 
 
 client.run(TOKEN)
